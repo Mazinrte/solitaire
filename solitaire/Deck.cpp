@@ -5,7 +5,6 @@ using namespace std;
 #include <iostream>
 #include <list>
 
-
 void Deck::createDeck(list<Card> deck)
 {
 	Card card = Card();

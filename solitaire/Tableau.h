@@ -5,8 +5,9 @@ using namespace std;
 #include "Card.h"
 class Tableau
 {
-	void setTableau(list<Card>&, int);
-	list<Card> getTableau(list<Card>& tableauToReturn);
+public:
+	void setTableau(list<Card>&, list<Card>&, int);
+	list<Card> getTableau(list<Card>&);
 	Card card;
 	list<Card> tab1;
 	list<Card> tab2;

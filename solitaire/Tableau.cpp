@@ -1,6 +1,9 @@
 #include "Tableau.h"
 #include "Deck.h"
-void Tableau::setTableau(list<Card>& tab, int tabNo)
+void Tableau::setTableau(list<Card>& tab,list<Card>&deck, int tabNo)
 {
-	
+	for (int i = 0; i < tabNo; i++)
+	{
+		tab.push_back(deck.front());
+	}
 }

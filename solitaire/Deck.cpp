@@ -1,11 +1,15 @@
 #include "Deck.h"
 #include "Card.h"
-using namespace std;
 #include <string>
 #include <iostream>
 #include <list>
-
-
+#include <iterator>
+#include<algorithm>
+using namespace std;
+Card& Deck::getCard()
+{
+	return deck.front();
+}
 void Deck::createDeck(list<Card> deck)
 {
 	Card card = Card();
@@ -35,17 +39,22 @@ void Deck::showCard(list<string>& deckToShow)
 {
 	cout << "First card: " << deckToShow.front() << endl;
 }
-/*
-void Deck::shuffleDeck(list<string>& deck) {
-	// Initialize random seed
-	srand(time(0));
-	// Iterate through the list and swap elements
-	for (auto it = deck.begin(); it != deck.end(); ++it) {
-		// Get a random position
-		auto randomPos = next(deck.begin(), rand() % 52);
 
+void Deck::shuffleDeck(list<string>& deck) 
+{
+	// Check if the list is empty
+	if (deck.empty()) {
+		cout << "Deck is empty. Cannot shuffle." << endl;
+		return;
+	}
+	// Initialize random seed
+	srand(static_cast<unsigned>(time(0)));
+	// Iterate through the list and swap elements
+	for (auto it = deck.begin(); it != deck.end(); ++it) 
+	{
+		// Get a random position
+		auto randomPos = next(deck.begin(), rand() % deck.size());
 		// Swap the current element with the random element
-		iter_swap(it, randomPos);
+		std::iter_swap(it, randomPos);
 	}
 }
-*/

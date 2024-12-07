@@ -1,6 +1,6 @@
 #pragma once
-#include "Deck.h"
-using namespace std;
+
+// extra libr
 #include<string>
 #include <list>
 #include <queue>
@@ -8,6 +8,9 @@ using namespace std;
 #include <stack>
 //header files
 #include "Deck.h"
+#include "Tableau.h"
+//std libr
+using namespace std;
 class Board
 {
     // function to move around cards -- currently not finished

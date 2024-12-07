@@ -10,18 +10,6 @@
   * Created on November 9, 2024, 3:15 PM
   */
 
-#include <cstdlib>
-#include<list>
-#include <iostream>
-#include <regex>
-#include <stack>
-#include <ctime>
-#include <cstdlib>
-#include <string>
-#include <queue>
-#include <algorithm>
-#include "Card.h"
-using namespace std;
 
 /*
  *
@@ -37,8 +25,7 @@ using namespace std;
 * // assign node
 * 1. make card header file
 * 2. incorporate randomized deck to draw from
-* 3. incorporate randomized tableau
-* 4.incorporate place to put a suit
+* 3. incorporate tableau
 * 5. incorporate waste pile
 * 6. incorporate being able to move and place cards onto board (general board function)
  */

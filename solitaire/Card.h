@@ -4,20 +4,22 @@ using namespace std;
 class Card
 {
 public:
+	// constructor
+	Card();
 	//setters
 	void setSuit(string);
-	void setRank(int);
+	void setRank(string);
 	void setColor(string);
 	// getters
 	string getSuit();
-	int getRank();
+	string getRank();
 	string getColor();
 private:
 	// constant variables
 	
 	// variables
 	string suit;
-	int rank;
+	string rank;
 	string color;
 };
 

@@ -1,10 +1,14 @@
 #include "Card.h"
 //setters
+Card::Card()
+{
+
+}
 void Card::setSuit(string s)
 {
 	suit = s;
 }
-void Card::setRank(int r)
+void Card::setRank(string r)
 {
 	rank = r;
 }
@@ -17,7 +21,7 @@ string Card::getSuit()
 {
 	return suit;
 }
-int Card::getRank()
+string Card::getRank()
 {
 	return rank;
 }

@@ -19,15 +19,55 @@
 #include <cstdlib>
 #include <string>
 #include <queue>
-#include <algorithm>
-#include "Card.h"
+
 using namespace std;
 
 /*
  *
  */
 
+
+#include <iostream>
+#include <list>
+#include <string>
+#include <algorithm>
+#include <cstdlib>
+#include <ctime>
+#include "Card.h"
+
+
+
+void shuffleDeck(std::list<std::string>& deck) {
+    // Initialize random seed
+    srand(time(0));
+    // Iterate through the list and swap elements
+    for (auto it = deck.begin(); it != deck.end(); ++it) {
+        // Get a random position
+        auto randomPos = next(deck.begin(), rand() % 52);
+
+        // Swap the current element with the random element
+        iter_swap(it, randomPos);
+    }
+}
+
+
+
 // you can use map to assign player name and score
+
+
+void showDeck(list<string>& deckToShow)
+{
+    for (const string& card : deckToShow)  // Range-based loop to iterate through the list
+    {
+        cout << card << endl;
+    }
+    cout << endl;
+}
+
+void showCard(list<string>& deckToShow)
+{
+    cout << "First card: " << deckToShow.front() << endl;
+}
 void listToQueue(list<string>& cardList, queue<string>& queueToInput)
 {
     for (const string& card : cardList)
@@ -75,8 +115,8 @@ void createBoard()
     std::queue<string> wastePile;
     string input;
     std::queue<string> cardStack;
-    //createDeck(deck);
-    
+    createDeck(deck);
+    shuffleDeck(deck);
     listToQueue(deck, queueOfDeck);
     // displays tableaus 
     for (int i = 0; i < 7; i++)
@@ -110,7 +150,7 @@ void createBoard()
 
 int main()
 {
-   // createBoard();
+    createBoard();
 }
 /*
 *

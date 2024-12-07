@@ -28,33 +28,10 @@ using namespace std;
  */
 
 // you can use map to assign player name and score
-void listToQueue(list<string>& cardList, queue<string>& queueToInput)
-{
-    for (const string& card : cardList)
-    {
-        queueToInput.push(card);
-        cardList.pop_back();
-    }
-}
-void displayWhatsInQueue(queue<string>& queue) {
 
-    cout << queue.front();
-    queue.pop();
-}
-void wastePileFunc(list<string>& list)
-{
-    list.pop_back();
-}
-void moveCard()
-{
-    string input;
-    cout << "which card to move: " << endl;
-    cin >> input;
-    if (input == "tabOne")
-    {
 
-    }
-}
+
+
 
 /*
 * // assign node
@@ -66,51 +43,12 @@ void moveCard()
 * 6. incorporate being able to move and place cards onto board (general board function)
  */
 
-void createBoard()
-{
 
-    std::stack <string> stack;
-    std::queue<string> queueOfDeck;
-    std::list<string> deck;
-    std::queue<string> wastePile;
-    string input;
-    std::queue<string> cardStack;
-    //createDeck(deck);
-    
-    listToQueue(deck, queueOfDeck);
-    // displays tableaus 
-    for (int i = 0; i < 7; i++)
-    {
-        displayWhatsInQueue(queueOfDeck);
-        string unknown = "N/A";
-        cout << " | ";
-        string cardDrawn = queueOfDeck.front();
-
-        cardStack.push(cardDrawn);
-        int hiddenCount = i + 1;
-        for (int j = 0; j < hiddenCount; ++j)
-        {
-            cout << unknown;
-            cout << ",\t";
-
-        }
-
-    }
-    /*
-    // makes waste pile
-    string front = queueOfDeck.front();
-    wastePileFunc(deck);
-    wastePile.push(front);
-    wastePile.push("Waste Pile");
-    cout << endl;
-    displayWhatsInQueue(wastePile);
-     * */
-}
 
 
 int main()
 {
-   // createBoard();
+  
 }
 /*
 *

@@ -15,8 +15,6 @@ public:
 	string getRank();
 	string getColor();
 private:
-	// constant variables
-	
 	// variables
 	string suit;
 	string rank;

@@ -6,10 +6,12 @@
 #include <iterator>
 #include<algorithm>
 using namespace std;
-Card& Deck::getCard()
+
+Card Deck::getCard()
 {
 	return deck.front();
 }
+
 void Deck::createDeck(list<Card> deck)
 {
 	Card card = Card();

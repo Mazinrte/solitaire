@@ -6,7 +6,7 @@ using namespace std;
 class Deck
 {
 public:
-	list<Card&> deck;
+	list<Card>& deck;
 	void createDeck(list<Card>);
 	void showDeck(list<string>&);
 	void showCard(list<string>&);

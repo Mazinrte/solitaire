@@ -49,7 +49,6 @@ int main()
     // use random_shuffle for mutating algorithms
     // have minimum and maximum for organization
 // container classes
-
     // will need a list, slist,or bit_vector for sequence category (1 needed) -- done
     // will need a set, map, or hash for associative containers category (2 needed)
     // will need a stack, queue, or priority queue for container adaptors (2 needed)

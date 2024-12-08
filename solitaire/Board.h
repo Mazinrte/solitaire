@@ -8,30 +8,19 @@
 #include <stack>
 //header files
 #include "Deck.h"
+#include "Card.h"
 #include "Tableau.h"
 //std libr
 using namespace std;
 class Board
 {
-    // function to move around cards -- currently not finished
-    void moveCard();
-    
-    
-    
+    //input deck on board
+    void inputDeckProperFormat();
+    // input tableaus
+    void inputTableauProperFormat();
+    // input waste pile
+    void inputWastePileProperFormat();
+    // compiles everything into complete board
     void createBoard();
-	// waste pile
-	//    
-    /*
-     makes waste pile
-    string front = queueOfDeck.front();
-    wastePileFunc(deck);
-    wastePile.push(front);
-    wastePile.push("Waste Pile");
-    cout << endl;
-    displayWhatsInQueue(wastePile);
-    */
-	// tableaus
-	// deck 
-	// 
 };
 

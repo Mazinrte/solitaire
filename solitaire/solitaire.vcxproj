@@ -133,12 +133,14 @@
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="solitaire.cpp" />
     <ClCompile Include="Tableau.cpp" />
+    <ClCompile Include="WastePile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="Card.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="Tableau.h" />
+    <ClInclude Include="WastePile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

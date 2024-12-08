@@ -61,3 +61,7 @@ void Deck::shuffleDeck(list<Card>& deck)
 		std::iter_swap(it, randomPos);
 	}
 }
+Card Deck::drawCard()
+{
+	return deck.front();
+}

@@ -19,5 +19,6 @@ private:
 	string suit;
 	string rank;
 	string color;
+	string card;
 };
 

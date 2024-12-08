@@ -6,46 +6,47 @@
 #include <iterator>
 #include<algorithm>
 using namespace std;
-
-Card Deck::getCard()
+Deck::Deck()
 {
-	return deck.front();
-}
-
-void Deck::createDeck(list<Card> deck)
-{
-	Card card = Card();
+	
 	for (int i = 0; i < suits->length(); i++)
 	{
-		string suitValue = suits[i];
-		card.setSuit(suitValue);
 		for (int j = 0; j < numberOfRanks; j++)
 		{
-			string rankValue = ranking[j];
-			card.setRank(rankValue);
+			Card card;
+			card.setSuit(suits[i]);
+			card.setRank(ranking[j]);
+			deck.push_back(card);
 		}
-		deck.push_back(card);
+		
 	}
 }
 
-void Deck::showDeck(list<string>& deckToShow)
+
+void Deck::showDeck(list<Card>& deckToShow)
 {
-	for (const string& card : deckToShow)  // Range-based loop to iterate through the list
+	if (deckToShow.empty()) {
+		cout << "Deck is empty!" << endl;
+		return;
+	}
+	for (Card& card : deckToShow)  // Range-based loop to iterate through the list
 	{
-		cout << card << endl;
+		cout << card.getSuit() << " of " << card.getRank() << endl;
 	}
 	cout << endl;
 }
 
-void Deck::showCard(list<string>& deckToShow)
+void Deck::showCard(list<Card>& deckToShow)
 {
-	cout << "First card: " << deckToShow.front() << endl;
+	Card firstCard = deckToShow.front();
+	cout << "First card: " << firstCard.getRank() << " of " << firstCard.getSuit()  << endl;
 }
 
-void Deck::shuffleDeck(list<string>& deck) 
+void Deck::shuffleDeck(list<Card>& deck) 
 {
 	// Check if the list is empty
-	if (deck.empty()) {
+	if (deck.empty()) 
+	{
 		cout << "Deck is empty. Cannot shuffle." << endl;
 		return;
 	}

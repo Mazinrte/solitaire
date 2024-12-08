@@ -1,6 +1,7 @@
 #include "Card.h"
 //setters
 Card::Card(){}
+
 void Card::setSuit(string s)
 {
 	suit = s;

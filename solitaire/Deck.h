@@ -6,12 +6,16 @@ using namespace std;
 class Deck
 {
 public:
-	list<Card>& deck;
-	void createDeck(list<Card>);
-	void showDeck(list<string>&);
-	void showCard(list<string>&);
-	void shuffleDeck(list<string>&);
-	Card getCard();
+	// constructor
+	Deck();
+	// deck storage
+	list<Card> deck;
+	
+	// functions to display 
+	void showDeck(list<Card>&);
+	void showCard(list<Card>&);
+	// shuffle
+	void shuffleDeck(list<Card>&);
 private:
 	string suits[4] = { "Hearts", "Diamonds", "Clubs", "Spades" };
 	string ranking[13] = {"Ace","1","2","3","4","5","6","7","8","9","10","King","Queen"};

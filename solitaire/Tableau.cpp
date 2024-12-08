@@ -7,7 +7,7 @@ void Tableau::setTableau(list<Card>& tab, list<Card>& deck, int tabNo)
 		tab.push_back(deck.front());
 	}
 }
-list<Card> getTableau(list<Card>& tableauToReturn)
+list<Card> Tableau::getTableau(list<Card>& tableauToReturn)
 {
 	return tableauToReturn;
 }

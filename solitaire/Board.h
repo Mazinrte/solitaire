@@ -14,8 +14,9 @@
 using namespace std;
 class Board
 {
+    
     //input deck on board
-    void inputDeckProperFormat(list<Card>&);
+    void inputDeckProperFormat();
     // input tableaus
     void inputTableauProperFormat();
     // input waste pile

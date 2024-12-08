@@ -12,7 +12,7 @@ public:
 	void setTableau(list<Card>&,int);
 	// getter
 	list<Card>& getTableau();
-	void showTableau(list<Card>&);
+	void showTableauTop(list<Card>&, int);
 private:
 // tableau with value
 	list<Card> tableauToReturn;

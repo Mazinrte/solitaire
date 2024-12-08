@@ -17,6 +17,7 @@ public:
 	// shuffle
 	void shuffleDeck(list<Card>&);
 	// getter
+	list<Card>& getDeck();
 	Card drawCard();
 private:
 	string suits[4] = { "Hearts", "Diamonds", "Clubs", "Spades" };

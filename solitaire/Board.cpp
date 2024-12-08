@@ -1,9 +1,14 @@
 #include "Board.h"
 #include "Deck.h"
 #include<list>
+#include <iostream>
+#include <string>
+using namespace std;
 void Board::inputDeckProperFormat()
 {
-	cout << "hi";
+	Deck deck;
+	list<Card>& deckList = deck.getDeck();
+	deck.showCard(deckList);
 }
 void Board::inputTableauProperFormat()
 {

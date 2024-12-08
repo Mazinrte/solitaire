@@ -35,10 +35,13 @@ void Deck::showDeck(list<Card>& deckToShow)
 	}
 	cout << endl;
 }
-
-void Deck::showCard(list<Card>& deckToShow)
+list<Card>& Deck::getDeck()
 {
-	Card firstCard = deckToShow.front();
+	return deck;
+}
+void Deck::showCard(list<Card>& deck)
+{
+	Card firstCard = deck.front();
 	cout << "First card: " << firstCard.getRank() << " of " << firstCard.getSuit()  << endl;
 }
 

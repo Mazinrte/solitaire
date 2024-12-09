@@ -1,5 +1,7 @@
+//headers
 #include "Deck.h"
 #include "Card.h"
+// libraries
 #include <string>
 #include <iostream>
 #include <list>

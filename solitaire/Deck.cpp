@@ -23,7 +23,10 @@ Deck::Deck()
 		
 	}
 }
-
+void Deck::pop()
+{
+	deck.pop_back();
+}
 
 void Deck::showDeck(list<Card>& deckToShow)
 {
@@ -44,7 +47,7 @@ list<Card>& Deck::getDeck()
 void Deck::showCard(list<Card>& deck)
 {
 	Card firstCard = deck.front();
-	cout << "First card: " << firstCard.getRank() << " of " << firstCard.getSuit()  << endl;
+	cout << "First card in deck: " << firstCard.getRank() << " of " << firstCard.getSuit()  << endl;
 }
 
 void Deck::shuffleDeck(list<Card>& deck) 
@@ -68,5 +71,7 @@ void Deck::shuffleDeck(list<Card>& deck)
 }
 Card Deck::drawCard()
 {
-	return deck.front();
+	Card topCard = deck.front();  // Get the top card
+	deck.pop_front();             // Remove the top card from the list
+	return topCard;
 }

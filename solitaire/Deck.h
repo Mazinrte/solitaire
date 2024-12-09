@@ -10,7 +10,7 @@ public:
 	Deck();
 	// deck storage
 	list<Card> deck;
-	
+	void pop();
 	// functions to display 
 	void showDeck(list<Card>&);
 	void showCard(list<Card>&);

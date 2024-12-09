@@ -17,7 +17,7 @@
 
 // you can use map to assign player name and score
 
-
+#include "Board.h"
 
 
 
@@ -35,7 +35,8 @@
 
 int main()
 {
-  
+    Board board = Board();
+    board.createBoard();
 }
 /*
 *

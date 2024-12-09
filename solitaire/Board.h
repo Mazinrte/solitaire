@@ -14,7 +14,8 @@
 using namespace std;
 class Board
 {
-    
+public:
+    Board();
     //input deck on board
     void inputDeckProperFormat();
     // input tableaus
